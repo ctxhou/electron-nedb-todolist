@@ -40,7 +40,7 @@ class TodoItemStore {
         return this.db.find({isDone: false}).exec();
     }
 
-    archive({_id}) {
+    archive(_id) {
         return this.db.update({_id}, {$set: {isDone: true}})
     }
 }
